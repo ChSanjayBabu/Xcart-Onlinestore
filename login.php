@@ -41,8 +41,6 @@
                 {
                     // remember that user's now logged in by storing user's ID in session
                     $_SESSION["email"] = $Row["email"];
-                    header('Location: portfolio.php');
-                    exit;
                 }
                 else
                 {
