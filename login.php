@@ -1,14 +1,15 @@
 <?php
     session_start();
     
-    
+    $error = "";
+    $loc = "";
     // if user reached page via GET (as by clicking a link or via redirect)
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // to show login page
         require("login_form.php");
     }
-
+    
     // else if user reached page via POST (as by submitting a form via POST)
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
@@ -17,17 +18,16 @@
         if(empty($_POST["email"]))
         {
             //we can use $_SESSION["error"] to change to div in login_page so it displays error
-            echo "You must provide your email<br>";
+           $error = $error."You must provide your email<br>";
             $num++;
         }
         if(empty($_POST["password"]))
         {
-            echo "You must provide your password";
+            $error = $error."You must provide your password";
             $num++;
         }
         if($num == 0)
         {
-
             require("connect.php");
             // query database for user
             $result = mysqli_query($conn,"SELECT * FROM details WHERE email = '".$_POST["email"]."'");
@@ -41,19 +41,20 @@
                 {
                     // remember that user's now logged in by storing user's ID in session
                     $_SESSION["email"] = $Row["email"];
+                    $loc = "portfolio.php";
                 }
                 else
                 {
-                    echo "wrong password<br>";
+                    $error =  $error."wrong password<br>";
                 }
             }
     
             // else apologize
             else
             {
-                echo "email doesn't exist<br>";
+                $error = $error."email doesn't exist<br>";
             }
         }
+        echo json_encode(array("error" => $error,"loc" => $loc));
     }
-
 ?>
