@@ -25,6 +25,7 @@
         else
         {
             $_SESSION["email"] = $_POST["email"];
+            $_SESSION["fname"] = $_POST["fname"];
             header('Location: portfolio.php');
             exit;
         }

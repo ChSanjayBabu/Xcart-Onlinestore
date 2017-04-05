@@ -1,7 +1,6 @@
 <?php
     session_start();
     $_SESSION["error"] = "";
-    unset($_SESSION["msg"]);
     if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         require("connect.php");
