@@ -4,6 +4,13 @@
         <title>
             Dashboard
         </title>
+        <style>
+            body  
+            {
+                background-image: url("../images/<?= $back_grd?>");
+            }
+        
+        </style>        
     </head>
     <?php
         session_start();

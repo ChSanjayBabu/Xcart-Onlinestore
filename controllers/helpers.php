@@ -25,8 +25,16 @@
     
     function render($view, $values = [])
     {
+        if ($view == "header.php")
+        {
+
+                // extract variables into local scope
+                extract($values);    
+                require("../views/{$view}");
+                exit;
+        }
         // if view exists, render it
-        if (file_exists("../public_html/{$view}"))
+        else if (file_exists("../public_html/{$view}"))
         {
             // extract variables into local scope
             extract($values);
