@@ -4,6 +4,12 @@
         <title>
             index
         </title>
+        <style>
+            body  
+            {
+                background-image: url("images/background-pattern.jpg");
+            }
+        </style>
     </head>
     <body>
         <h4>
