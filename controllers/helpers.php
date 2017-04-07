@@ -31,7 +31,6 @@
                 // extract variables into local scope
                 extract($values);    
                 require("../views/{$view}");
-                exit;
         }
         // if view exists, render it
         else if (file_exists("../public_html/{$view}"))
@@ -40,7 +39,6 @@
             extract($values);
 
             require("../public_html/{$view}");
-            exit;
         }
 
         // else err

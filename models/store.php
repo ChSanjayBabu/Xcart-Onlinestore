@@ -1,42 +1,43 @@
         <?php
             require("../controllers/connect.php");
-            render("header.php",["back_grd" => "background-pattern.jpg"]);
-        ?>
-        <script>
-            function change_background()
+            if(!isset($_POST["category"]))
             {
-                var cat = document.getElementsByName("category")[0].value;
-                var set_back;
-                switch(cat)
+                render("header.php",["back_grd" => "cart.PNG"]);
+            }
+            else
+            {
+                $cat = $_POST["category"];
+                $set_back = "books.jpg";
+                switch($cat)
                 {
-                    case 0: set_back = "background-pattern.jpg";
+                    case "Books": $set_back = "books.jpg";
                     break;
-                    case 1: set_back = "books.jpg";
+                    case "clothing": $set_back = "clothing.jpg";
                     break;
-                    case 2: set_back = "clothing.jpg";
-                    break;
-                    case 3: set_back = "electronics.jpg";
+                    case "Electronics": $set_back = "electronics.jpg";
                     break;  
-                    case 4: set_back = "furn.jpg";
+                    case "Furniture": $set_back = "furn.jpg";
                     break; 
-                    case 5: set_back = "bike.jpg";
+                    case "Vechile": $set_back = "bike.jpg";
                     break;  
-                    case 6: set_back = "others.jpg";
+                    case "others": $set_back = "others.jpg";
                     break;
+                    default:
+                    $set_back = "cart.PNG";
                 }
-                document.body.style.backgroundImage = set_back;
-            } 
-        </script>
+                render("header.php",["back_grd" => $set_back]);     
+            }
+        ?>
         <a href="../public_html/logout.php">Logout</a>
         <form action = "store.php" method="POST">
-            <select name = "category" onchange = "change_background()">
+            <select name = "category">
                 <option selected="selected" disabled="disabled" value ="0">select category</option>
-                <option value ="1">Books</option>
-                <option value ="2">clothing</option>
-                <option value ="3">Electronics</option>
-                <option value ="4">Furniture</option>
-                <option value ="5">Vechile</option>
-                <option value ="6">others</option>
+                <option >Books</option>
+                <option >clothing</option>
+                <option >Electronics</option>
+                <option >Furniture</option>
+                <option >Vechile</option>
+                <option >others</option>
             </select>
             <?php
                 $colleges = mysqli_query($conn,"SELECT coll FROM colleges");
