@@ -20,15 +20,16 @@
                 var x = "";
                 if(document.getElementsByName("email")[0].value == "")
                 {
-                    x = x+"You must provide your email<br>";
-                    document.getElementById("error").innerHTML = x;
                     num++;
+                    document.getElementById("email").style.marginBottom = "5px";
+                    document.getElementById("pass").style.marginTop = "5px";
+                    document.getElementById("error_user").innerHTML = "please enter email!";
                 }
                 if(document.getElementsByName("password")[0].value == "")
                 {
-                    x = x+"password mustn't be empty<br>";
-                    document.getElementById("error").innerHTML = x;
                     num++;
+                    document.getElementById("pass").style.marginBottom = "5px";
+                    document.getElementById("error_pass").innerHTML = "please enter password!";
                 }
                 if(num != 0)
                 {
@@ -50,13 +51,13 @@
     			</div>
     			<label for="email">EMAIL</label>
     			<br/>
-    			<input type="email"  name="email">
+    			<input id ="email" type="email"  name="email">
     			<br/>
-    			<div id = "error_user" type="hidden"></div>
+    			<div id = "error_user"></div>
     			<label for="password">PASSWORD</label>
     			<br/>
-    			<input type="password" name="password">
-    			<br/>
+    			<input id="pass" type="password" name="password">
+    			<div id = "error_pass"></div>
     			<div id = "error">
                     <?php
                         echo $_SESSION["error"];
@@ -64,7 +65,9 @@
                         unset($_SESSION["error"]);
                     ?>
             	</div>
-    			<button type="submit">Log In</button> or  <a href="../models/register.php"> register</a>
+            	<div id = "sub">
+    			    <button  type="submit">Log In</button> or  <a href="../models/register.php"> register</a>
+    			</div>
     		</div>
     	</div>
     </form>
