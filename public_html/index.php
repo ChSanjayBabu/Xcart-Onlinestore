@@ -9,9 +9,9 @@
 				<div class="header-icon"><img src="images/Shopping-Cart.jpg" style="width:70px; height:60px;"/></div>
 				<div class="text">Welcome to Xcart (... a smart startup)</div>
 				<div class="logsign">
-					<b><a class="header-login" href="/login.html">Log In</a></b>
+					<b><a class="header-login" href="../models/login.php">Log In</a></b>
 					<i><span class="text-gray">or</span></i>
-					<b><a class="header-signup" href="/register.html">Visit Store</a></b>
+					<b><a class="header-signup" href="../models/store.php">Visit Store</a></b>
 				</div>
 			</div>
 			<div class="msg">

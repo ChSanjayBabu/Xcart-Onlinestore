@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>login</title>
+        <meta charset="utf-8">
+    	<title>Log In</title>
+    	
+    	<!-- Google Fonts -->
+    	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    
+    	<link rel="stylesheet" href="../public_html/css/style.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <?php 
             session_start();
@@ -33,13 +39,34 @@
     </head>
     <body>
 
-        <form method="post" action = "../models/login.php" onsubmit="return formvalid()">
-            <input type="email" placeholder="enter email" name="email"><br/>
-            <input type ="password" placeholder ="enter password" name="password"><br/>
-            <div id = "error">
-                <?= $_SESSION["error"] ?>
-            </div>
-            <input type = "submit" value = "login"> or <a href="../models/register.php">register</a><br>
-        </form>
+    <form action = "../models/login.php" method = "post" onsubmit="return formvalid()">
+    	<div class="container">
+    		<div class="top">
+    			<h1 id="title" class="hidden">Xcart</h1>
+    		</div>
+    		<div class="login-box animated fadeInUp">
+    			<div class="box-header">
+    				<h2>Log In</h2>
+    			</div>
+    			<label for="email">EMAIL</label>
+    			<br/>
+    			<input type="email"  name="email">
+    			<br/>
+    			<div id = "error_user" type="hidden"></div>
+    			<label for="password">PASSWORD</label>
+    			<br/>
+    			<input type="password" name="password">
+    			<br/>
+    			<div id = "error">
+                    <?php
+                        echo $_SESSION["error"];
+                        $_SESSION["error"] = "";
+                        unset($_SESSION["error"]);
+                    ?>
+            	</div>
+    			<button type="submit">Log In</button> or  <a href="../models/register.php"> register</a>
+    		</div>
+    	</div>
+    </form>
     </body>
 </html>
