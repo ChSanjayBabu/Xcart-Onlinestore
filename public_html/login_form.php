@@ -7,7 +7,7 @@
     	<!-- Google Fonts -->
     	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
     
-    	<link rel="stylesheet" href="../public_html/css/style.css">
+    	<link rel="stylesheet" href="../public_html/css/style_login.css">
         <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
         <?php 
             session_start();
@@ -31,7 +31,7 @@
                     document.getElementById("pass").style.marginBottom = "5px";
                     document.getElementById("error_pass").innerHTML = "please enter password!";
                 }
-                if(num != 0)
+                if(num !== 0)
                 {
                     return false;
                 }

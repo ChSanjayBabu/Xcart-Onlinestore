@@ -1,8 +1,13 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>register</title>
-        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <meta charset="utf-8">
+        <title>Register</title>
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>    	
+    	<!-- Google Fonts -->
+    	<link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700|Lato:400,100,300,700,900' rel='stylesheet' type='text/css'>
+    
+    	<link rel="stylesheet" href="../public_html/css/style_register.css">
         <script>/*global $*/
             function formvalid()
             {
@@ -15,15 +20,21 @@
                 if (len < 6 || len > 30)
                 {
                     error = error+"password must be between 6 to 30 characters<br>";
-                    num++;
+                    num = num +1;
                 }
                 if (x != y)
                 {
-                    error = error+"password doen't match";
-                    num++;
+                    error = error+"password doen't match<br>";
+                    num = num +1;
+                }
+                if(document.getElementsByName("coll")[0].value == "select college")
+                {
+                    error = error+"please select college";
+                    num = num + 1;
                 }
                 document.getElementById("error").innerHTML = error;
-                if(num != 0)
+                
+                if(num !== 0)
                 {
                     return false;
                 }
@@ -34,26 +45,36 @@
     <body>
 
         <form method="post" action = "../models/register.php" onsubmit="return formvalid()">
-            <input type="email" placeholder="enter email" name="email" required><br/>
-            <input type="text" placeholder="fname" name="fname" required><br/>
-            <?php
-                require("../controllers/connect.php");
-                $colleges = mysqli_query($conn,"SELECT coll FROM colleges");
-            ?>
-            <select name="coll">
-                    <option selected="selected" disabled="disabled">select college</option>
-                <?php  foreach($colleges as $coll): ?>
-                    <option value = "<?= $coll["coll"] ?>"><?= $coll["coll"]?></option>
-                <?php endforeach ?>
-            </select><br/>
-            <input type ="password" placeholder ="enter password" name="password" required><br/>
-            <input type ="password" placeholder ="retype password" name="confirm" required><br/>
-            Gender<input type="radio" name="gender" value="male" required> Male
-                  <input type="radio" name="gender" value="female" required> Female<br>
-            <div id = "error">
-                <?= $_SESSION["error"] ?>
-            </div>
-            <input type = "submit" value = "register"><br/>
+            <div class="container">
+        		<div class="top">
+        			<h1 id="title" class="hidden">Xcart</h1>
+        		</div>
+        		<div class="login-box animated fadeInUp">
+        			<div class="box-header">
+        				<h3>Register</h3>
+        			</div>
+                <input type="email" placeholder="enter email" name="email" required><br/>
+                <input type="text" placeholder="fname" name="fname" required><br/>
+                <?php
+                    require("../controllers/config.php");
+                    $colleges = mysqli_query($conn,"SELECT coll FROM colleges");
+                ?>
+                <select name="coll">
+                        <option selected="selected" disabled="disabled">select college</option>
+                    <?php  foreach($colleges as $coll): ?>
+                        <option value = "<?= $coll["coll"] ?>"><?= $coll["coll"]?></option>
+                    <?php endforeach ?>
+                </select><br/>
+                <input type ="password" placeholder ="enter password" name="password" required><br/>
+                <input type ="password" placeholder ="retype password" name="confirm"required ><br/>
+                Gender<input type="radio" name="gender" value="male" required> Male
+                      <input type="radio" name="gender" value="female" required> Female<br>
+                <div id = "error">
+                    <?= $_SESSION["error"] ?>
+                </div>
+            	<div id = "sub">
+    			    <button  type="submit">Register</button>
+    			</div>
         </form>
     </body>
 </html>
