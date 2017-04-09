@@ -1,0 +1,207 @@
+
+
+.grid {
+  margin-left: 20px;
+  margin-right: auto;
+  max-width: 24em;
+  width: 90%;
+}
+
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  background-color: #eaeaea;
+  background: url("../images/sell2.jpg") no-repeat center center fixed;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.5;
+  margin: 0;
+  min-height: 100%;
+}
+
+/* /anchor.css */
+
+a {
+  color: inherit;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #1dabb8;
+}
+
+/* /form.css */
+
+fieldset {
+  border: none;
+  margin: 0;
+}
+
+input {
+     -moz-appearance: none;
+          appearance: none;
+  border: none;
+  font: inherit;
+  margin: 0;
+  outline: none;
+  padding: 0;
+}
+
+input[type='submit'] {
+  cursor: pointer;
+}
+
+.form input[type='email'],
+.form input[type='password'] {
+  width: 100%;
+}
+
+/* /sell.css */
+
+.sell__header {
+  margin-top: 60px;
+  background-color: #282830;
+  border-top-left-radius: 0.25em;
+  border-top-right-radius: 0.25em;
+  color: #fff;
+  padding: 0.6em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.sell__title {
+
+  font-size: 18px;
+  margin: 0;
+  padding :15px;
+}
+
+.sell__body {
+  background-color: #cc9766;
+  padding: 1.5em;
+  position: relative;
+}
+
+.sell__body::before {
+  background-color: #fff;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  margin-left: -0.25em;
+  margin-top: -0.25em;
+  position: absolute;
+  top: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  width: 0.5em;
+}
+.sell #basic{
+  padding: 6px;
+  border-radius: 0.25em;
+  margin-left:18px;
+  margin-top: 5px;
+  margin-bottom:5px;
+  width: 86%;
+  position : relative;
+  border: 0.0625em solid #e5e5e5;
+}
+.sell select{
+  font-weight: 400;
+  padding: 10px;
+  border-radius: 0.25em;
+  margin-left:18px;
+  margin-top: 5px;
+  margin-bottom:5px;
+  width: 86%;
+  position : relative;
+  border: 0.0625em solid #e5e5e5;
+  font-family: 'Helvetica', 'Arial', sans-serif;
+}
+textarea{
+  margin-left:18px;
+  margin-top: 5px;
+  margin-bottom:5px;
+  width: 500px;
+    padding: 6px;
+  border-radius: 0.25em;
+  position : relative;
+  border: 0.0625em solid #e5e5e5;
+  max-width:19em;
+
+}
+.sell button {
+  margin-left:45px;
+	margin-top: 8px;
+	border: 0;
+	border-radius: 2px;
+	color: white;
+	padding: 8px;
+	font-weight: 400;
+	font-size: 11px;
+	letter-spacing: 1px;
+	background-color: #000;
+	cursor:pointer;
+	outline: none;
+}
+.sell input[type='submit'] {
+  background-color: #996633;
+  border-radius: 0.25em;
+  margin-left : 105px;
+  color: #fff;
+  font-weight: 700;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  padding: 0.5em 1em;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.sell input[type='submit']:focus,
+.sell input[type='submit']:hover {
+  background-color: #198d98;
+}
+
+.sell__footer {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #cc9766;
+  border-bottom-left-radius: 0.25em;
+  border-bottom-right-radius: 0.25em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+  padding-top:0em;
+}
+.sell #rad{
+  margin    : 1px;
+  padding   : 2px;
+  font-size : 1em;
+  margin-left:20px;
+}
+.sell input[type='radio']
+{
+  margin-left:5px;
+  margin-right:3px;
+}

@@ -17,6 +17,8 @@
             {
                 var num = 0;
                 document.getElementById("error").innerHTML = "";
+                document.getElementById("error_user").innerHTML = "";
+                document.getElementById("error_pass").innerHTML = "";
                 var x = "";
                 if(document.getElementsByName("email")[0].value == "")
                 {

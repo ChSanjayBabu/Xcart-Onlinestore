@@ -24,4 +24,4 @@
     <body>
 
         <h1>Welcome,<?= $_SESSION["fname"] ?></h1><br>
-        <a href="sell.php">sell item</a><br>
+        <a href="../models/sell.php">sell item</a><br>
