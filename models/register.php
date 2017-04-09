@@ -13,8 +13,8 @@
     else if ($_SERVER["REQUEST_METHOD"] == "POST")
     {
         require_once("../controllers/connect.php");
-        $stat = mysqli_query($conn,"INSERT  INTO details (email, fname, coll,  pass, gen)
-                VALUES('".$_POST["email"]."','".$_POST["fname"]."','".$_POST["coll"]."','".$_POST["password"]."',
+        $stat = mysqli_query($conn,"INSERT  INTO details (email, fname, ph_no, coll,  pass, gen)
+                VALUES('".$_POST["email"]."','".$_POST["fname"]."','".$_POST["ph_no"]."','".$_POST["coll"]."','".$_POST["password"]."',
                 '".$_POST["gender"]."')");
         mysqli_close($conn);
         if (!$stat)

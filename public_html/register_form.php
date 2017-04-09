@@ -53,8 +53,9 @@
         			<div class="box-header">
         				<h3>Register</h3>
         			</div>
-                <input type="email" placeholder="enter email" name="email" required><br/>
-                <input type="text" placeholder="fname" name="fname" required><br/>
+                <input type="email" placeholder="Enter Email" name="email" required><br/>
+                <input type="text" placeholder="First Name" name="fname" required><br/>
+                <input type="text" placeholder="Phone No" name="ph_no" required><br/>
                 <?php
                     require("../controllers/config.php");
                     $colleges = mysqli_query($conn,"SELECT coll FROM colleges");

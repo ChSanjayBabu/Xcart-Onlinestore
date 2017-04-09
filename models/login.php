@@ -13,8 +13,25 @@
     // else if user reached page via POST (as by submitting a form via POST)
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
+            $num = "";
+            $mail = "";
+            if(is_numeric($_POST[mail_ph]))
+            {
+                $num = $_POST[mail_ph];
+            }
+            else
+            {
+                $mail = $_POST[mail_ph];
+            }
             // query database for user
-            $result = mysqli_query($conn,"SELECT * FROM details WHERE email = '".$_POST["email"]."'");
+            if($num === "")
+            {
+                $result = mysqli_query($conn,"SELECT * FROM details WHERE email = '".$mail."'");
+            }
+            else
+            {
+                $result = mysqli_query($conn,"SELECT * FROM details WHERE ph_no = '".$num."'");
+            }
             
             $Row = mysqli_fetch_array($result);
             // if we found user, check password

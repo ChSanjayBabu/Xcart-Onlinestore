@@ -51,12 +51,12 @@
     			<div class="box-header">
     				<h2>Log In</h2>
     			</div>
-    			<label for="email">EMAIL</label>
+    			<label for="email">Email or Phone</label>
     			<br/>
-    			<input id ="email" type="email"  name="email">
+    			<input id ="email" type="email/integer"  name="mail_ph">
     			<br/>
     			<div id = "error_user"></div>
-    			<label for="password">PASSWORD</label>
+    			<label for="password">Password</label>
     			<br/>
     			<input id="pass" type="password" name="password">
     			<div id = "error_pass"></div>
