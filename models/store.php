@@ -40,6 +40,7 @@
                 <option >others</option>
             </select>
             <?php
+                require("../controllers/config.php");
                 $colleges = mysqli_query($conn,"SELECT coll FROM colleges");
             ?>
             <select name="coll">
