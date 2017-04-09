@@ -43,6 +43,7 @@
           <input id ="basic" type = "text" name= "title" placeholder="Item Title (Min. length 4 char)"><br>
           <textarea type="text" name="desc" placeholder="Item description (Max. length 200 char)"></textarea><br>
           <textarea type="text" name="contact" placeholder="Contact info (Min. length 4 char)"></textarea><br>
+          <input id ="basic" type="text" name="price" placeholder="Your Price (In Rs.)"><br>
           
           <div id="rad">
               <input type="radio" name="choice" value="donate">I want to Donate  
@@ -50,7 +51,7 @@
           </div>
             
           <div style="height:0px;overflow:hidden">
-             <input type="file" id="fileInput" name="fileInput" />
+             <input type="file" id="fileInput" name="img" />
           </div>
           <button type="button" onclick="chooseFile();">Upload Image</button>
           <div id="disp" style="display:inline;margin-left:3px;"></div>

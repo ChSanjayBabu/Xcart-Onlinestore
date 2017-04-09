@@ -19,8 +19,8 @@
         {
             trigger_error("HTTP headers already sent at {$file}:{$line}", E_USER_ERROR);
         }
-        header("Location: {$location}");
-        exit;
+        header("Location: $location");
+        exit(0);
     }
     
     function render($view, $values = [])

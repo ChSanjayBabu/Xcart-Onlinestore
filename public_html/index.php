@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<html>
 		<head>
-			<title>cbayx</title>
+			<title>Xcart</title>
 			<link href="css/index.css" rel="stylesheet" type="text/css"/>
 		</head> 
 		<body>
@@ -16,13 +16,12 @@
 			</div>
 			<div class="msg">
 						 <h2>
-							 <?php
-			                if(isset($msg))
-			                {
-			                    echo $msg;
-			                }
-		                ?>
-	                </h2>
+							<?php
+									session_start();
+				                    echo $_SESSION["msg"];
+				                    unset($_SESSION["msg"]);
+			                ?>
+			             </h2>
 						<div>
 							<h1 class="head">Built for Students</h1>
 							<p class="para">An ecommerce platform aiming at introducing college students to the world of ecommerce. Put things up for bidding, buy stuff from other students. As simple as that !</p>

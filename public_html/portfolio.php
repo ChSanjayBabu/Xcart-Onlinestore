@@ -10,9 +10,12 @@
     }
 ?>
         <a href="../models/store.php">Go to store</a><br>
-        <a href="logout.php">logout</a><br>
+        <a href="../public_html/logout.php">logout</a><br>
         <div>
-            <?= $msg ?>
+            <?php
+                echo $msg;
+                $_SESSION["msg"] = "";
+            ?>
         </div>
 
     </body>

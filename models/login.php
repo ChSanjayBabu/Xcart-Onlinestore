@@ -3,6 +3,7 @@
     $_SESSION["error"] = "";
     require("../controllers/connect.php");
     // if user reached page via GET (as by clicking a link or via redirect)
+
     if($_SERVER["REQUEST_METHOD"] == "GET")
     {
         // to show login page
@@ -12,8 +13,6 @@
     // else if user reached page via POST (as by submitting a form via POST)
     else if($_SERVER["REQUEST_METHOD"] == "POST")
     {
-
-
             // query database for user
             $result = mysqli_query($conn,"SELECT * FROM details WHERE email = '".$_POST["email"]."'");
             
@@ -28,7 +27,7 @@
                     $_SESSION["email"] = $Row["email"];
                     $_SESSION["fname"] = $Row["fname"];
                     redirect('../public_html/portfolio.php');
-                    exit;
+                    exit(0);
                 }
                 else
                 {

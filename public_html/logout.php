@@ -5,8 +5,10 @@
 
     // log out current user, if any
     logout();
-    
-    render("index.php",["msg" => "You have succesfully Logged out"])
+    session_start();
+    $_SESSION["msg"] = "You have logged out succesfully";
+    redirect("index.php");
+    exit(0);
 ?>
 
 
