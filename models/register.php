@@ -17,7 +17,7 @@
                 VALUES('".$_POST["email"]."','".$_POST["fname"]."','".$_POST["ph_no"]."','".$_POST["coll"]."','".$_POST["password"]."',
                 '".$_POST["gender"]."')");
         mysqli_close($conn);
-        if (!$stat)
+        if ($stat === "false")
         {
             $_SESSION["error"] = "User with this email already exists";
             render("register_form.php");

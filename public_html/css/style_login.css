@@ -75,9 +75,11 @@ p.small {
 	line-height: 15px;
 
 }
-
+.login-box #log{
+	font-weight:400;
+}
 .login-box input {
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	padding: 8px;
 	border: 1px solid #ccc;
 	border-radius: 2px;

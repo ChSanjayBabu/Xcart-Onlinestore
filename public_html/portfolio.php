@@ -1,5 +1,6 @@
 <?php
     require("../views/header.php");
+    session_start();
     if(isset($_SESSION["msg"]))
     {
         $msg = $_SESSION["msg"];
@@ -9,6 +10,7 @@
         $msg = "";
     }
 ?>
+        
         <a href="../models/store.php">Go to store</a><br>
         <a href="../public_html/logout.php">logout</a><br>
         <div>
