@@ -15,20 +15,20 @@
 				</div>
 			</div>
 			<div class="msg">
-						 <h2>
-							<?php
-									session_start();
-				                    echo $_SESSION["msg"];
-				                    unset($_SESSION["msg"]);
-			                ?>
-			             </h2>
-						<div>
-							<h1 class="head">Built for Students</h1>
-							<p class="para">An ecommerce platform aiming at introducing college students to the world of ecommerce. Put things up for bidding, buy stuff from other students. As simple as that !</p>
-						</div>
-						<div class="decor">
-                         ==========================================================================================================
-						</div>
+				 <h2>
+					<?php
+							session_start();
+		                    echo $_SESSION["msg"];
+		                    unset($_SESSION["msg"]);
+	                ?>
+	             </h2>
+				<div>
+					<h1 class="head">Built for Students</h1>
+					<p class="para">An ecommerce platform aiming at introducing college students to the world of ecommerce. Put things up for bidding, buy stuff from other students. As simple as that !</p>
+				</div>
+				<div class="decor">
+                 ==========================================================================================================
+				</div>
 			</div>
 		</body>
 	</html>

@@ -1,6 +1,6 @@
 <?php 
     $host = "localhost";
-    $user = "parth242";
+    $user = "sanjay_ch";
     $pass = "3vXt73bGW7mEcGnI";
     $conn = mysqli_connect($host,$user,$pass);
     if (!$conn) 

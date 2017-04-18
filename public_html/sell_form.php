@@ -40,18 +40,18 @@
               <option>Vechile</option>
               <option>others</option>
           </select><br>
-          <input id ="basic" type = "text" name= "title" placeholder="Item Title (Min. length 4 char)"><br>
-          <textarea type="text" name="desc" placeholder="Item description (Max. length 200 char)"></textarea><br>
-          <textarea type="text" name="contact" placeholder="Contact info (Min. length 4 char)"></textarea><br>
-          <input id ="basic" type="text" name="price" placeholder="Your Price (In Rs.)"><br>
+          <input id ="basic" type = "text" name= "title" placeholder="Item Title (Min. length 4 char)" required><br>
+          <textarea type="text" name="desc" placeholder="Item description (Max. length 200 char)" required></textarea><br>
+          <textarea type="text" name="contact" placeholder="Contact info (Min. length 4 char)" required></textarea><br>
+          <input id ="basic" type="text" name="price" placeholder="Your Price (In Rs.)" required><br>
           
           <div id="rad">
-              <input type="radio" name="choice" value="donate">I want to Donate  
-              <input type="radio" name="choice" value="sell">I want to Sell<br>
+              <input type="radio" name="choice" value="donate" required>I want to Donate  
+              <input type="radio" name="choice" value="sell" required>I want to Sell<br>
           </div>
             
           <div style="height:0px;overflow:hidden">
-             <input type="file" id="fileInput" name="img" />
+             <input type="file" id="fileInput" name="img" /required>
           </div>
           <button type="button" onclick="chooseFile();">Upload Image</button>
           <div id="disp" style="display:inline;margin-left:3px;"></div>

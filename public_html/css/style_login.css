@@ -76,7 +76,7 @@ p.small {
 
 }
 .login-box #log{
-	font-weight:400;
+	font-weight:300;
 }
 .login-box input {
 	margin-bottom: 10px;
@@ -112,7 +112,7 @@ p.small {
 a:link {
 		color: #665851;
 		text-decoration: none;
-		font-weight: 900;
+		font-weight: 500;
 		font-size: 18px;
 		padding-right: 20px;
 }
